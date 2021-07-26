@@ -8,18 +8,25 @@ class App extends Component{
     this.state = {
       board: ["?", "?", "?", "?", "?", "?", "?", "?", "?"],
       treasureLocation: null,
+      bombeLocation: null,
     }
   }
 
 componentDidMount(){
   let treasure = Math.floor(Math.random() * this.state.board.length)
   this.setState({treasureLocation: treasure})
+
+  let bombe = Math.floor(Math.random() * this.state.board.length)
+  this.setState({bombeLocation: bombe})
 }
 
 handleGamePlay = (index) => {
   const {board} = this.state
   if(index === this.state.treasureLocation){
     board[index]="💎"
+    this.setState({board:board})
+  }else if(index === this.state.bombeLocation){
+    board[index]="💣"
     this.setState({board:board})
   }else{
     board[index] = "🌳"

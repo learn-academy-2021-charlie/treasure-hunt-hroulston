@@ -18,7 +18,7 @@ branch: tree-emoji
 branch: treasure-emoji
 
 - As a user, if I select the losing square the question mark will become a bomb emoji.
-branch: bomb emoji
+branch: bomb-emoji
 
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.
 branch: counter
