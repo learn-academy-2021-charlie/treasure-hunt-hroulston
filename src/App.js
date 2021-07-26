@@ -1,3 +1,4 @@
+import Square from './components/Square.js'
 import React, { Component } from 'react'
 import './App.css'
 
@@ -13,6 +14,13 @@ class App extends Component{
     return(
       <>
         <h1>Treasure Hunt Game</h1>
+        <div id="gameboard">
+        {this.state.board.map((value, index) => {return <Square
+          value={value}
+          key={index}
+           />
+         })}
+         </div>
       </>
     )
   }
