@@ -26,10 +26,11 @@ handleGamePlay = (index) => {
   if(index === this.state.treasureLocation){
     board[index]="💎"
     this.setState({board:board})
-    alert("You won the game!")
+    alert("You won the game 🥳 !")
   }else if(index === this.state.bombeLocation){
     board[index]="💣"
     this.setState({board:board})
+    alert("You lost the game 😭!")
   }else{
     board[index] = "🌳"
     this.setState({board: board})
