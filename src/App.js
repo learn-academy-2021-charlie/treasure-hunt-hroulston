@@ -9,6 +9,7 @@ class App extends Component{
       board: ["?", "?", "?", "?", "?", "?", "?", "?", "?"],
       treasureLocation: null,
       bombeLocation: null,
+      counter: 5
     }
   }
 
@@ -31,6 +32,7 @@ handleGamePlay = (index) => {
   }else{
     board[index] = "🌳"
     this.setState({board: board})
+    this.setState({counter: this.state.counter - 1})
   }
 }
 
@@ -46,6 +48,7 @@ handleGamePlay = (index) => {
           handleGamePlay={this.handleGamePlay}
            />
          })}
+         <p>Counter: {this.state.counter}</p>
          </div>
       </>
     )
