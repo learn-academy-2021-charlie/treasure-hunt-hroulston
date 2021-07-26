@@ -15,10 +15,17 @@ branch: index-alert
 branch: tree-emoji
 
 - As a user, if I select the winning square the question mark will become a treasure emoji.
+branch: treasure-emoji
 
 - As a user, if I select the losing square the question mark will become a bomb emoji.
+branch: bomb emoji
+
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.
+branch: counter
+
 - As a user, I can see a message informing me that I won the game if I select the square that contains the treasure.
+branch: winner-message
+
 - As a user, I can see a message informing me that I lost the game if I select the square that contains the bomb.
 - As a user, I cannot continue to play the game after I win or lose.
 - As a user, I can see a message informing me that I lost the game when I run out of turns (the counter reaches zero).
